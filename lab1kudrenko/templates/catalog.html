@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> АвтоPRO </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <h1> АвтоPRO </h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/about/">О нас</a>
+            <a href="/catalog/">Каталог</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Каталог автомобилей</h2>
+        <div class="catalog">
+            <div class="car-item">
+                <h3>{{ car }}</h3>
+                <img src="images/{{ info.image }}" alt="{{ car }}" width="200"> <!–– Добавляем изображение -->
+                <p>Цена: {{ info.price }} руб.</p>
+                <button>Арендовать</button>
+
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 ООО АвтоPRO</p>
+    </footer>
+</body>
+</html>
+
